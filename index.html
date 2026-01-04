@@ -1,186 +1,4 @@
-<!DOCTYPE html>
-<html lang="ru">
-<head>
-<meta charset="UTF-8">
-<title>МакСфера — iPhone</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<style>
-:root {
-  --black:#1d1d1f;
-  --gray:#6e6e73;
-  --bg:#f5f5f7;
-  --blue:#0071e3;
-}
-
-* {
-  margin:0;
-  padding:0;
-  box-sizing:border-box;
-  font-family:-apple-system,BlinkMacSystemFont,"SF Pro Text","Segoe UI",Roboto,Helvetica,Arial,sans-serif;
-}
-
-body {
-  background:var(--bg);
-  color:var(--black);
-}
-
-/* ===== HEADER ===== */
-header {
-  position:sticky;
-  top:0;
-  background:rgba(255,255,255,.85);
-  backdrop-filter:blur(14px);
-  border-bottom:1px solid #ddd;
-  z-index:100;
-}
-
-.nav {
-  max-width:1200px;
-  margin:auto;
-  padding:14px 20px;
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-}
-
-.logo {
-  font-size:20px;
-  font-weight:600;
-}
-
-.menu a {
-  margin-left:22px;
-  font-size:14px;
-  color:var(--black);
-  text-decoration:none;
-}
-
-.menu a:hover { color:var(--blue); }
-
-/* ===== HERO ===== */
-.hero {
-  text-align:center;
-  padding:100px 20px 80px;
-}
-
-.hero h1 {
-  font-size:56px;
-  font-weight:600;
-  margin-bottom:16px;
-}
-
-.hero p {
-  font-size:22px;
-  color:var(--gray);
-}
-
-/* ===== SECTIONS ===== */
-.section {
-  padding:100px 20px;
-  text-align:center;
-  background:white;
-  margin-bottom:40px;
-  opacity:0;
-  transform:translateY(40px);
-  transition:.8s ease;
-}
-
-.section.visible {
-  opacity:1;
-  transform:translateY(0);
-}
-
-.section h2 {
-  font-size:48px;
-  margin-bottom:12px;
-}
-
-.section p {
-  font-size:20px;
-  color:var(--gray);
-  margin-bottom:30px;
-}
-
-.price {
-  font-size:22px;
-  font-weight:600;
-  margin-bottom:30px;
-}
-
-.actions a {
-  display:inline-block;
-  margin:0 10px;
-  padding:12px 28px;
-  border-radius:999px;
-  font-size:15px;
-  text-decoration:none;
-}
-
-.buy {
-  background:var(--blue);
-  color:white;
-}
-
-.more {
-  color:var(--blue);
-}
-
-/* ===== FOOTER ===== */
-footer {
-  background:white;
-  border-top:1px solid #ddd;
-  padding:40px 20px;
-  text-align:center;
-}
-
-footer p {
-  color:var(--gray);
-  margin-bottom:10px;
-}
-
-footer a {
-  color:var(--blue);
-  text-decoration:none;
-  margin:0 10px;
-}
-</style>
-</head>
-
-<body>
-
-<header>
-  <div class="nav">
-    <div class="logo">МакСфера</div>
-    <nav class="menu">
-      <a href="#17promax">iPhone 17 Pro Max</a>
-      <a href="#17pro">17 Pro</a>
-      <a href="#17">17</a>
-      <a href="#16">16</a>
-      <a href="#15">15</a>
-    </nav>
-  </div>
-</header>
-
-<section class="hero">
-  <h1>iPhone. Как у Apple.</h1>
-  <p>Оригинальные устройства · Премиальный сервис</p>
-</section>
-
-<section id="17promax" class="section">
-  <h2>iPhone 17 Pro Max</h2>
-  <p>Максимум технологий. Максимум мощности.</p>
-  <div class="price">от 149 990 ₽</div>
-  <div class="actions">
-    <a class="buy" href="https://t.me/macsferastore">Купить</a>
-    <a class="more" href="https://t.me/macsferastore">Подробнее</a>
-  </div>
-</section>
-
-<section id="17pro" class="section">
-  <h2>iPhone 17 Pro</h2>
-  <p>Идеальный баланс дизайна и скорости.</p>
-  <div class="price">от 129 990 ₽</div>
+<div class="price">от 119 990 ₽</div>
   <div class="actions">
     <a class="buy" href="https://t.me/macsferastore">Купить</a>
     <a class="more" href="https://t.me/macsferastore">Подробнее</a>
@@ -189,7 +7,7 @@ footer a {
 
 <section id="17" class="section">
   <h2>iPhone 17</h2>
-  <p>Новая классика Apple.</p>
+  <p>Новая классика Apple</p>
   <div class="price">от 109 990 ₽</div>
   <div class="actions">
     <a class="buy" href="https://t.me/macsferastore">Купить</a>
@@ -199,7 +17,7 @@ footer a {
 
 <section id="16" class="section">
   <h2>iPhone 16</h2>
-  <p>Мощный. Современный. Надёжный.</p>
+  <p>Современный и мощный</p>
   <div class="price">от 89 990 ₽</div>
   <div class="actions">
     <a class="buy" href="https://t.me/macsferastore">Купить</a>
@@ -209,8 +27,47 @@ footer a {
 
 <section id="15" class="section">
   <h2>iPhone 15</h2>
-  <p>Отличный выбор каждый день.</p>
+  <p>Отличный выбор каждый день</p>
   <div class="price">от 69 990 ₽</div>
   <div class="actions">
     <a class="buy" href="https://t.me/macsferastore">Купить</a>
-    <a class="more" href="https://t.
+    <a class="more" href="https://t.me/macsferastore">Подробнее</a>
+  </div>
+</section>
+
+<footer>
+  <p>© 2026 МакСфера</p>
+  <p>
+    <a href="https://t.me/macsferastore">Telegram</a> |
+    <a href="tel:+79288822468">+7 (928) 882-24-68</a>
+  </p>
+</footer>
+
+<a class="telegram" href="https://t.me/macsferastore">✈</a>
+<a class="newyear" href="#17pm">🎄 Новогодние предложения</a>
+
+<script>
+/* snow only winter */
+const month=new Date().getMonth();
+if(month===11||month===0){
+  const snow=document.getElementById('snow');
+  setInterval(()=>{
+    const s=document.createElement('div');
+    s.className='snowflake';
+    s.style.left=Math.random()*window.innerWidth+'px';
+    s.style.animationDuration=(3+Math.random()*3)+'s';
+    snow.appendChild(s);
+    setTimeout(()=>s.remove(),6000);
+  },250);
+}
+
+/* reveal */
+const sections=document.querySelectorAll('.section');
+const obs=new IntersectionObserver(e=>{
+  e.forEach(i=>{if(i.isIntersecting)i.target.classList.add('visible')});
+},{threshold:.2});
+sections.forEach(s=>obs.observe(s));
+</script>
+
+</body>
+</html>
