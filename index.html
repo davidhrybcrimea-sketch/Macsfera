@@ -7,154 +7,142 @@
 
 <style>
 :root {
-  --apple-black: #1d1d1f;
-  --apple-gray: #6e6e73;
-  --apple-bg: #f5f5f7;
-  --apple-blue: #0071e3;
+  --black:#1d1d1f;
+  --gray:#6e6e73;
+  --bg:#f5f5f7;
+  --blue:#0071e3;
 }
 
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text",
-               "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:-apple-system,BlinkMacSystemFont,"SF Pro Text","Segoe UI",Roboto,Helvetica,Arial,sans-serif;
 }
 
 body {
-  background: var(--apple-bg);
-  color: var(--apple-black);
+  background:var(--bg);
+  color:var(--black);
 }
 
 /* ===== HEADER ===== */
 header {
-  position: sticky;
-  top: 0;
-  background: rgba(255,255,255,0.85);
-  backdrop-filter: blur(12px);
-  border-bottom: 1px solid #ddd;
-  z-index: 100;
+  position:sticky;
+  top:0;
+  background:rgba(255,255,255,.85);
+  backdrop-filter:blur(14px);
+  border-bottom:1px solid #ddd;
+  z-index:100;
 }
 
 .nav {
-  max-width: 1200px;
-  margin: auto;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 14px 20px;
+  max-width:1200px;
+  margin:auto;
+  padding:14px 20px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
 }
 
 .logo {
-  font-size: 20px;
-  font-weight: 600;
-}
-
-.menu {
-  display: flex;
-  gap: 22px;
+  font-size:20px;
+  font-weight:600;
 }
 
 .menu a {
-  text-decoration: none;
-  color: var(--apple-black);
-  font-size: 14px;
+  margin-left:22px;
+  font-size:14px;
+  color:var(--black);
+  text-decoration:none;
 }
 
-.menu a:hover {
-  color: var(--apple-blue);
-}
+.menu a:hover { color:var(--blue); }
 
 /* ===== HERO ===== */
 .hero {
-  text-align: center;
-  padding: 90px 20px 70px;
+  text-align:center;
+  padding:100px 20px 80px;
 }
 
 .hero h1 {
-  font-size: 48px;
-  font-weight: 600;
-  margin-bottom: 12px;
+  font-size:56px;
+  font-weight:600;
+  margin-bottom:16px;
 }
 
 .hero p {
-  font-size: 21px;
-  color: var(--apple-gray);
+  font-size:22px;
+  color:var(--gray);
 }
 
-/* ===== PRODUCTS ===== */
-.products {
-  max-width: 1200px;
-  margin: auto;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 40px;
-  padding: 40px 20px 80px;
+/* ===== SECTIONS ===== */
+.section {
+  padding:100px 20px;
+  text-align:center;
+  background:white;
+  margin-bottom:40px;
+  opacity:0;
+  transform:translateY(40px);
+  transition:.8s ease;
 }
 
-.card {
-  background: white;
-  border-radius: 18px;
-  padding: 30px;
-  text-align: center;
-  transition: transform .3s, box-shadow .3s;
+.section.visible {
+  opacity:1;
+  transform:translateY(0);
 }
 
-.card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 20px 40px rgba(0,0,0,.12);
+.section h2 {
+  font-size:48px;
+  margin-bottom:12px;
 }
 
-.card img {
-  max-width: 100%;
-  height: 180px;
-  object-fit: contain;
-  margin-bottom: 20px;
-}
-
-.card h3 {
-  font-size: 22px;
-  margin-bottom: 10px;
-}
-
-.card p {
-  color: var(--apple-gray);
-  margin-bottom: 16px;
+.section p {
+  font-size:20px;
+  color:var(--gray);
+  margin-bottom:30px;
 }
 
 .price {
-  font-size: 20px;
-  font-weight: 600;
-  margin-bottom: 20px;
+  font-size:22px;
+  font-weight:600;
+  margin-bottom:30px;
+}
+
+.actions a {
+  display:inline-block;
+  margin:0 10px;
+  padding:12px 28px;
+  border-radius:999px;
+  font-size:15px;
+  text-decoration:none;
 }
 
 .buy {
-  display: inline-block;
-  padding: 12px 26px;
-  border-radius: 999px;
-  background: var(--apple-blue);
-  color: white;
-  text-decoration: none;
-  font-size: 15px;
+  background:var(--blue);
+  color:white;
+}
+
+.more {
+  color:var(--blue);
 }
 
 /* ===== FOOTER ===== */
 footer {
-  background: white;
-  border-top: 1px solid #ddd;
-  padding: 40px 20px;
-  text-align: center;
+  background:white;
+  border-top:1px solid #ddd;
+  padding:40px 20px;
+  text-align:center;
 }
 
 footer p {
-  color: var(--apple-gray);
-  margin-bottom: 10px;
+  color:var(--gray);
+  margin-bottom:10px;
 }
 
 footer a {
-  color: var(--apple-blue);
-  text-decoration: none;
-  margin: 0 10px;
+  color:var(--blue);
+  text-decoration:none;
+  margin:0 10px;
 }
 </style>
 </head>
@@ -165,53 +153,64 @@ footer a {
   <div class="nav">
     <div class="logo">МакСфера</div>
     <nav class="menu">
-      <a href="#">iPhone 17 Pro Max</a>
-      <a href="#">iPhone 17 Pro</a>
-      <a href="#">iPhone 17</a>
-      <a href="#">iPhone 16</a>
-      <a href="#">iPhone 15</a>
+      <a href="#17promax">iPhone 17 Pro Max</a>
+      <a href="#17pro">17 Pro</a>
+      <a href="#17">17</a>
+      <a href="#16">16</a>
+      <a href="#15">15</a>
     </nav>
   </div>
 </header>
 
 <section class="hero">
-  <h1>iPhone. В стиле Apple.</h1>
-  <p>Оригинальные устройства. Премиальный сервис.</p>
+  <h1>iPhone. Как у Apple.</h1>
+  <p>Оригинальные устройства · Премиальный сервис</p>
 </section>
 
-<section class="products">
-  <div class="card">
-    <img src="https://via.placeholder.com/400x300">
-    <h3>iPhone 17 Pro Max</h3>
-    <p>Максимум технологий и мощности</p>
-    <div class="price">от 149 990 ₽</div>
+<section id="17promax" class="section">
+  <h2>iPhone 17 Pro Max</h2>
+  <p>Максимум технологий. Максимум мощности.</p>
+  <div class="price">от 149 990 ₽</div>
+  <div class="actions">
     <a class="buy" href="https://t.me/macsferastore">Купить</a>
-  </div>
-
-  <div class="card">
-    <img src="https://via.placeholder.com/400x300">
-    <h3>iPhone 17 Pro</h3>
-    <p>Идеальный баланс дизайна и скорости</p>
-    <div class="price">от 129 990 ₽</div>
-    <a class="buy" href="https://t.me/macsferastore">Купить</a>
-  </div>
-
-  <div class="card">
-    <img src="https://via.placeholder.com/400x300">
-    <h3>iPhone 17</h3>
-    <p>Новая классика Apple</p>
-    <div class="price">от 109 990 ₽</div>
-    <a class="buy" href="https://t.me/macsferastore">Купить</a>
+    <a class="more" href="https://t.me/macsferastore">Подробнее</a>
   </div>
 </section>
 
-<footer>
-  <p>© 2026 МакСфера</p>
-  <p>
-    <a href="https://t.me/macsferastore">Telegram</a> |
-    <a href="tel:+79288822468">+7 (928) 882-24-68</a>
-  </p>
-</footer>
+<section id="17pro" class="section">
+  <h2>iPhone 17 Pro</h2>
+  <p>Идеальный баланс дизайна и скорости.</p>
+  <div class="price">от 129 990 ₽</div>
+  <div class="actions">
+    <a class="buy" href="https://t.me/macsferastore">Купить</a>
+    <a class="more" href="https://t.me/macsferastore">Подробнее</a>
+  </div>
+</section>
 
-</body>
-</html>
+<section id="17" class="section">
+  <h2>iPhone 17</h2>
+  <p>Новая классика Apple.</p>
+  <div class="price">от 109 990 ₽</div>
+  <div class="actions">
+    <a class="buy" href="https://t.me/macsferastore">Купить</a>
+    <a class="more" href="https://t.me/macsferastore">Подробнее</a>
+  </div>
+</section>
+
+<section id="16" class="section">
+  <h2>iPhone 16</h2>
+  <p>Мощный. Современный. Надёжный.</p>
+  <div class="price">от 89 990 ₽</div>
+  <div class="actions">
+    <a class="buy" href="https://t.me/macsferastore">Купить</a>
+    <a class="more" href="https://t.me/macsferastore">Подробнее</a>
+  </div>
+</section>
+
+<section id="15" class="section">
+  <h2>iPhone 15</h2>
+  <p>Отличный выбор каждый день.</p>
+  <div class="price">от 69 990 ₽</div>
+  <div class="actions">
+    <a class="buy" href="https://t.me/macsferastore">Купить</a>
+    <a class="more" href="https://t.
